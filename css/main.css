@@ -1,0 +1,9 @@
+.app-box {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.app-box main {
+    flex: 1;
+}
