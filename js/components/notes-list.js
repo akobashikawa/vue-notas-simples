@@ -23,8 +23,14 @@ const Component = {
       if (this.filter) {
         return this.items.filter(item => {
           const includesTexto = item['Nueva Nota Simple'].trim().toLowerCase().includes(this.filter.trim().toLowerCase());
+          const includesEtiquetas = item['Etiquetas'].trim().toLowerCase().includes(this.filter.trim().toLowerCase());
+          const includesReferencias = item['Referencias'].trim().toLowerCase().includes(this.filter.trim().toLowerCase());
+          const includesFecha = item['Marca temporal'].trim().toLowerCase().includes(this.filter.trim().toLowerCase());
 
           return includesTexto
+            || includesEtiquetas
+            || includesReferencias
+            || includesFecha
             ;
         });
       }
