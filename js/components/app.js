@@ -1,8 +1,10 @@
-const App = {
+const Component = {
   name: 'app',
+  
   computed: {
     ...Vuex.mapState(['main']),
   },
+
   template: `<div class="app-box">
         <header>
             <b-navbar toggleable="lg" type="dark" variant="info">
@@ -33,4 +35,4 @@ const App = {
     </div>`,
 };
 
-export default App;
+export default Component;
